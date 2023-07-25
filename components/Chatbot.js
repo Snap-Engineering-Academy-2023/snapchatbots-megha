@@ -10,19 +10,19 @@ import { Themes } from "../assets/Themes";
 import { millisToMinutesAndSeconds } from "../utils";
 import { useNavigation } from "@react-navigation/native";
 
-const SongArtists = ({ SongArtists }) => {
+const BotDeveloper = ({ BotDeveloper }) => {
   return (
-    <Text style={styles.songArtists} numberOfLines={1}>
-      {SongArtists.map(({ name }) => `${name}`).join(", ")}
+    <Text style={styles.botDeveloper} numberOfLines={1}>
+      {BotDeveloper.map(({ name }) => `${name}`).join(", ")}
     </Text>
   );
 };
 
-const Song = ({
+const Chatbot = ({
   index,
   imageUrl,
   songTitle,
-  songArtists,
+  botDevelopers,
   albumName,
   duration,
 }) => {
@@ -37,17 +37,17 @@ const Song = ({
         })
       }
     >
-      <View style={styles.song}>
+      <View style={styles.chatbot}>
         <Text style={styles.index}>{index + 1}</Text>
         <Image
-          style={[styles.image, styles.albumCover]}
+          style={[styles.image, styles.botImg]}
           source={{ uri: imageUrl }}
         />
-        <View style={styles.songArtistContainer}>
-          <Text style={[styles.songTitle]} numberOfLines={1}>
+        <View style={styles.botInfoContainer}>
+          <Text style={[styles.botTitle]} numberOfLines={1}>
             {songTitle}
           </Text>
-          <SongArtists SongArtists={songArtists} />
+          <BotDeveloper BotDeveloper={botDevelopers} />
         </View>
         <Text style={[styles.albumName]} numberOfLines={1}>
           {albumName}
@@ -61,7 +61,7 @@ const Song = ({
 };
 
 const styles = StyleSheet.create({
-  song: {
+  chatbot: {
     display: "flex",
     flexDirection: "row",
     padding: 5,
@@ -76,21 +76,21 @@ const styles = StyleSheet.create({
     fontSize: 12,
     margin: 1,
   },
-  albumCover: {
+  botImg: {
     resizeMode: "contain",
     flex: 0.2,
     width: 50,
     height: 50,
   },
-  songArtistContainer: {
+  botInfoContainer: {
     flex: 0.4,
     margin: 5,
   },
-  songTitle: {
+  botTitle: {
     color: Themes.colors.white,
     fontSize: 12,
   },
-  songArtists: {
+  botDeveloper: {
     color: Themes.colors.gray,
     fontSize: 12,
   },
@@ -108,4 +108,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Song;
+export default Chatbot;

@@ -1,7 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, SafeAreaView, Platform } from "react-native";
 import { Themes } from "../assets/Themes";
-import SongList from "../components/SongList";
 import ChatList from "../components/ChatList";
 import { CHATBOTS } from "./ChatScreen";
 
