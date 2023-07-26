@@ -1,14 +1,5 @@
-# snapchatbots-baker
+# Celebrity-Trivia
 
-Baker's basic code for starting the chatbot project for week 5!
-
-### Setup Repository
-1. Click "Use as Template" and use the name "snapchatbots-yourname"
-2. Clone from your new repo into your desired folder with terminal
-3. Open the project code in VSCode (use `code .` if you can)
-4. Open terminal in the VSCode window then run `yarn` to install packages
-5. Launch the project with `yarn expo start`
-
-
-You will not need to setup spotify because I used some dummy data for the tracks
-
+- ChatGPT powered bot that plays the game of "celebrity akinator" with the user.
+- The game starts with the bot thinking about a celebrity. The user can ask the bot 10 (yes or no) questions and at can attempt to guess the celebrity the bot is thinking about.
+- Bot will not reveal the name of the celebrity and will not provide the user with strong/obvious hints.
